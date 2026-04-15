@@ -16,3 +16,22 @@ function getHumanChoice() {
     let hand = prompt("Please type 'rock', 'paper', 'scissors'");
     return hand;
 }
+
+function loseMessage(humanStr, computerStr) {
+    console.log(`You Lose! ${computerStr} beats ${humanStr}`);
+}
+
+function winMessage(humanStr, computerStr) {
+    console.log(`You Win! ${humanStr} beats ${computerStr}`);
+}
+
+function playRound(humanChoice, computerChoice) {
+    humanChoice = humanChoice.toLowerCase();
+
+    if (humanChoice == "rock" && computerChoice == "paper") {
+        loseMessage(humanChoice, computerChoice);
+    } else if (humanChoice == "rock" && computerChoice == "scissors") {
+        winMessage(humanChoice, computerChoice);
+    }
+}
+
