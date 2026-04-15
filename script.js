@@ -8,3 +8,8 @@ function getComputerChoice() {
         return "scissors";
     }
 }
+
+function getHumanChoice() {
+    let hand = prompt("Please type 'rock', 'paper', 'scissors'");
+    return hand;
+}
