@@ -56,8 +56,10 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
-    hChoice = getHumanChoice();
-    cChoice = getComputerChoice();
-    playRound(hChoice, cChoice);
+    for (i = 1; i <= 5; i++) {
+        hChoice = getHumanChoice();
+        cChoice = getComputerChoice();
+        playRound(hChoice, cChoice);
+    }
 }
 
