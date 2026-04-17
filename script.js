@@ -25,6 +25,10 @@ function winMessage(humanStr, computerStr) {
     console.log(`You Win! ${humanStr} beats ${computerStr}`);
 }
 
+function tieMessage(humanStr, computerStr) {
+    console.log(`You have tied! ${humanStr} vs ${computerStr}`)
+}
+
 function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
 
