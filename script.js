@@ -55,3 +55,9 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+function playGame() {
+    hChoice = getHumanChoice();
+    cChoice = getComputerChoice();
+    playRound(hChoice, cChoice);
+}
+
