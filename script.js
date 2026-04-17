@@ -36,6 +36,20 @@ function playRound(humanChoice, computerChoice) {
         loseMessage(humanChoice, computerChoice);
     } else if (humanChoice == "rock" && computerChoice == "scissors") {
         winMessage(humanChoice, computerChoice);
+    } else if (humanChoice == "rock" && computerChoice == "rock") {
+        tieMessage(humanChoice, computerChoice);
+    } else if (humanChoice == "paper" && computerChoice == "rock") {
+        winMessage(humanChoice, computerChoice);
+    } else if (humanChoice == "paper" && computerChoice == "paper") {
+        tieMessage(humanChoice, computerChoice);
+    } else if (humanChoice == "paper" && computerChoice == "scissors") {
+        loseMessage(humanChoice, computerChoice);
+    } else if (humanChoice == "scissors" && computerChoice == "rock") {
+        loseMessage(humanChoice, computerChoice);
+    } else if (humanChoice == "scissors" && computerChoice == "paper") {
+        winMessage(humanChoice, computerChoice);
+    } else if (humanChoice == "scissors" && computerChoice == "scissors") {
+        tieMessage(humanChoice, computerChoice);
     }
 }
 
