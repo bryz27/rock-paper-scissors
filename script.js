@@ -19,10 +19,12 @@ function getHumanChoice() {
 
 function loseMessage(humanStr, computerStr) {
     console.log(`You Lose! ${computerStr} beats ${humanStr}`);
+    computerScore = computerScore + 1;
 }
 
 function winMessage(humanStr, computerStr) {
     console.log(`You Win! ${humanStr} beats ${computerStr}`);
+    humanScore = humanScore + 1;
 }
 
 function tieMessage(humanStr, computerStr) {
