@@ -63,3 +63,4 @@ function playGame() {
     }
 }
 
+playGame();
