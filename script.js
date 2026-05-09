@@ -4,6 +4,7 @@ let computerScore = 0;
 const rockBtn = document.querySelector("#rock");
 const paperBtn = document.querySelector("#paper")
 const scissorsBtn = document.querySelector("#scissors");
+const buttonsDiv = document.querySelector("#buttons");
 
 function getComputerChoice() {
     let choice = Math.floor(Math.random() * 3);
@@ -58,6 +59,8 @@ function playRound(humanChoice, computerChoice) {
         tieMessage(humanChoice, computerChoice);
     }
 }
+
+
 
 function playGame() {
     // for (i = 1; i <= 5; i++) {
