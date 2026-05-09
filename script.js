@@ -87,8 +87,12 @@ function gameLogic() {
                 console.log("play again");
                 break;
         }
+        round = round + 1;
+        if (round >= 5) {
+            finalResult();
+            round = 0;
+        }
     });
-    round += 1;
 }
 
 function finalResult() {
@@ -108,7 +112,6 @@ function playGame() {
     //     playRound(hChoice, cChoice);
     // }
     gameLogic();
-    finalResult();
 }
 
 playGame();
