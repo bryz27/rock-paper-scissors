@@ -60,7 +60,32 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+buttonsDiv.addEventListener('click', (event) => {
+    let target = event.target;
+    let hChoice = "";
+    let cChoice = getComputerChoice();
 
+    switch (target.id) {
+        case 'rock':
+            hChoice = target.id;
+            cChoice = getComputerChoice();
+            playRound(hChoice, cChoice);
+            break;
+        case 'paper':
+            hChoice = target.id;
+            cChoice = getComputerChoice();
+            playRound(hChoice, cChoice);
+            break;
+        case 'scissors':
+            hChoice = target.id;
+            cChoice = getComputerChoice();
+            playRound(hChoice, cChoice);
+            break;
+        default:
+            console.log("play again");
+            break;
+    }
+})
 
 function playGame() {
     // for (i = 1; i <= 5; i++) {
