@@ -2,9 +2,6 @@ let humanScore = 0;
 let computerScore = 0;
 let round = 0;
 
-const rockBtn = document.querySelector("#rock");
-const paperBtn = document.querySelector("#paper")
-const scissorsBtn = document.querySelector("#scissors");
 const buttonsDiv = document.querySelector("#buttons");
 
 function getComputerChoice() {
