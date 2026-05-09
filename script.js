@@ -1,6 +1,10 @@
 let humanScore = 0;
 let computerScore = 0;
 
+const rockBtn = document.querySelector("#rock");
+const paperBtn = document.querySelector("#paper")
+const scissorsBtn = document.querySelector("#scissors");
+
 function getComputerChoice() {
     let choice = Math.floor(Math.random() * 3);
     if (choice == 0) {
