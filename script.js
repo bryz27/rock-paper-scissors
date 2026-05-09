@@ -60,32 +60,34 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-buttonsDiv.addEventListener('click', (event) => {
-    let target = event.target;
-    let hChoice = "";
-    let cChoice = getComputerChoice();
+function gameLogic() {
+    buttonsDiv.addEventListener('click', (event) => {
+        let target = event.target;
+        let hChoice = "";
+        let cChoice = getComputerChoice();
 
-    switch (target.id) {
-        case 'rock':
-            hChoice = target.id;
-            cChoice = getComputerChoice();
-            playRound(hChoice, cChoice);
-            break;
-        case 'paper':
-            hChoice = target.id;
-            cChoice = getComputerChoice();
-            playRound(hChoice, cChoice);
-            break;
-        case 'scissors':
-            hChoice = target.id;
-            cChoice = getComputerChoice();
-            playRound(hChoice, cChoice);
-            break;
-        default:
-            console.log("play again");
-            break;
-    }
-});
+        switch (target.id) {
+            case 'rock':
+                hChoice = target.id;
+                cChoice = getComputerChoice();
+                playRound(hChoice, cChoice);
+                break;
+            case 'paper':
+                hChoice = target.id;
+                cChoice = getComputerChoice();
+                playRound(hChoice, cChoice);
+                break;
+            case 'scissors':
+                hChoice = target.id;
+                cChoice = getComputerChoice();
+                playRound(hChoice, cChoice);
+                break;
+            default:
+                console.log("play again");
+                break;
+        }
+    });
+}
 
 function finalResult() {
     if (humanScore > computerScore) {
@@ -103,6 +105,7 @@ function playGame() {
     //     cChoice = getComputerChoice();
     //     playRound(hChoice, cChoice);
     // }
+    gameLogic();
     finalResult();
 }
 
