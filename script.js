@@ -91,6 +91,8 @@ function gameLogic() {
         if (round >= 5) {
             finalResult();
             round = 0;
+            humanScore = 0;
+            computerScore = 0;
         }
     });
 }
