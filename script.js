@@ -56,7 +56,18 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
-    
+    // for (i = 1; i <= 5; i++) {
+    //     hChoice = getHumanChoice();
+    //     cChoice = getComputerChoice();
+    //     playRound(hChoice, cChoice);
+    // }
+    // if (humanScore > computerScore) {
+    //     console.log(`You win the game! Your score: ${humanScore} Opponent score: ${computerScore}`);
+    // } else if (computerScore > humanScore) {
+    //     console.log(`You lose the game! Your score: ${humanScore} Opponent score: ${computerScore}`);
+    // } else if (humanScore == computerScore) {
+    //     console.log(`You have tied the game! Your score: ${humanScore} Opponent score: ${computerScore}`)
+    // }
 }
 
 playGame();
