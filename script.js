@@ -4,6 +4,8 @@ let round = 0;
 
 const buttonsDiv = document.querySelector("#buttons");
 let winMsg = document.querySelector("#win-msg");
+let hScore = document.querySelector("#human-score");
+let cScore = document.querySelector("#computer-score");
 
 function getComputerChoice() {
     let choice = Math.floor(Math.random() * 3);
@@ -21,18 +23,26 @@ function getHumanChoice() {
     return hand;
 }
 
+function refreshScore(){
+    hScore.textContent = humanScore;
+    cScore.textContent = computerScore;
+}
+
 function loseMessage(humanStr, computerStr) {
     console.log(`You Lose! ${computerStr} beats ${humanStr}`);
     computerScore = computerScore + 1;
+    refreshScore();
 }
 
 function winMessage(humanStr, computerStr) {
     console.log(`You Win! ${humanStr} beats ${computerStr}`);
     humanScore = humanScore + 1;
+    refreshScore();
 }
 
 function tieMessage(humanStr, computerStr) {
     console.log(`You have tied! ${humanStr} vs ${computerStr}`)
+    refreshScore();
 }
 
 function playRound(humanChoice, computerChoice) {
@@ -106,6 +116,7 @@ function finalResult() {
         console.log(`You have tied the game! Your score: ${humanScore} Opponent score: ${computerScore}`)
         winMsg.textContent = `You have tied the game! Your score: ${humanScore} Opponent score: ${computerScore}`
     }
+    refreshScore();
 }
 
 function playGame() {
