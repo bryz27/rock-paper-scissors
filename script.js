@@ -96,11 +96,14 @@ function gameLogic() {
                 break;
         }
         round = round + 1;
-        if (round >= 5) {
+        if (round == 5) {
             finalResult();
-            round = 0;
             humanScore = 0;
             computerScore = 0;
+        }
+        if (round > 5) {
+            round = 0;
+            winMsg.textContent = "";
         }
     });
 }
@@ -108,13 +111,13 @@ function gameLogic() {
 function finalResult() {
     if (humanScore > computerScore) {
         console.log(`You win the game! Your score: ${humanScore} Opponent score: ${computerScore}`);
-        winMsg.textContent = `You win the game! Your score: ${humanScore} Opponent score: ${computerScore}`;
+        winMsg.textContent = `You win the game!`;
     } else if (computerScore > humanScore) {
         console.log(`You lose the game! Your score: ${humanScore} Opponent score: ${computerScore}`);
-        winMsg.textContent = `You lose the game! Your score: ${humanScore} Opponent score: ${computerScore}`
+        winMsg.textContent = `You lose the game!`;
     } else if (humanScore == computerScore) {
         console.log(`You have tied the game! Your score: ${humanScore} Opponent score: ${computerScore}`)
-        winMsg.textContent = `You have tied the game! Your score: ${humanScore} Opponent score: ${computerScore}`
+        winMsg.textContent = `You have tied the game!`;
     }
     refreshScore();
 }
