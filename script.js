@@ -3,6 +3,7 @@ let computerScore = 0;
 let round = 0;
 
 const buttonsDiv = document.querySelector("#buttons");
+let winMsg = document.querySelector("#win-msg");
 
 function getComputerChoice() {
     let choice = Math.floor(Math.random() * 3);
@@ -97,10 +98,13 @@ function gameLogic() {
 function finalResult() {
     if (humanScore > computerScore) {
         console.log(`You win the game! Your score: ${humanScore} Opponent score: ${computerScore}`);
+        winMsg.textContent = `You win the game! Your score: ${humanScore} Opponent score: ${computerScore}`;
     } else if (computerScore > humanScore) {
         console.log(`You lose the game! Your score: ${humanScore} Opponent score: ${computerScore}`);
+        winMsg.textContent = `You lose the game! Your score: ${humanScore} Opponent score: ${computerScore}`
     } else if (humanScore == computerScore) {
         console.log(`You have tied the game! Your score: ${humanScore} Opponent score: ${computerScore}`)
+        winMsg.textContent = `You have tied the game! Your score: ${humanScore} Opponent score: ${computerScore}`
     }
 }
 
