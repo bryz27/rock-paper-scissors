@@ -1,6 +1,6 @@
 let humanScore = 0;
 let computerScore = 0;
-let round = 1;
+let round = 0;
 
 const buttonsDiv = document.querySelector("#buttons");
 let winMsg = document.querySelector("#win-msg");
@@ -8,6 +8,7 @@ let hScore = document.querySelector("#human-score");
 let cScore = document.querySelector("#computer-score");
 let rStat = document.querySelector("#round-stat");
 let rNum = document.querySelector("#round-num");
+rNum.textContent = round;
 
 function getComputerChoice() {
     let choice = Math.floor(Math.random() * 3);
