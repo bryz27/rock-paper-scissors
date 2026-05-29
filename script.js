@@ -46,6 +46,8 @@ function winMessage(humanStr, computerStr) {
 function tieMessage(humanStr, computerStr) {
     console.log(`You have tied! ${humanStr} vs ${computerStr}`);
     rStat.textContent = `You have tied! ${humanStr} vs ${computerStr}`;
+    humanScore = humanScore + 1;
+    computerScore = computerScore + 1;
     refreshScore();
 }
 
