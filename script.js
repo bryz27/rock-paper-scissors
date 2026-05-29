@@ -1,12 +1,13 @@
 let humanScore = 0;
 let computerScore = 0;
-let round = 0;
+let round = 1;
 
 const buttonsDiv = document.querySelector("#buttons");
 let winMsg = document.querySelector("#win-msg");
 let hScore = document.querySelector("#human-score");
 let cScore = document.querySelector("#computer-score");
 let rStat = document.querySelector("#round-stat");
+let rNum = document.querySelector("#round-num");
 
 function getComputerChoice() {
     let choice = Math.floor(Math.random() * 3);
@@ -24,7 +25,7 @@ function getHumanChoice() {
     return hand;
 }
 
-function refreshScore(){
+function refreshScore() {
     hScore.textContent = humanScore;
     cScore.textContent = computerScore;
 }
@@ -102,14 +103,16 @@ function gameLogic() {
                 break;
         }
         round = round + 1;
+        rNum.textContent = round;
         if (round == 5) {
             finalResult();
             humanScore = 0;
             computerScore = 0;
         }
         if (round > 5) {
-            round = 0;
+            round = 1;
             winMsg.textContent = "";
+            rNum.textContent = round;
         }
     });
 }
