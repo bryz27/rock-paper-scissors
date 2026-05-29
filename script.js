@@ -6,6 +6,7 @@ const buttonsDiv = document.querySelector("#buttons");
 let winMsg = document.querySelector("#win-msg");
 let hScore = document.querySelector("#human-score");
 let cScore = document.querySelector("#computer-score");
+let rStat = document.querySelector("#round-stat");
 
 function getComputerChoice() {
     let choice = Math.floor(Math.random() * 3);
@@ -30,18 +31,21 @@ function refreshScore(){
 
 function loseMessage(humanStr, computerStr) {
     console.log(`You Lose! ${computerStr} beats ${humanStr}`);
+    rStat.textContent = `You Lose! ${computerStr} beats ${humanStr}`;
     computerScore = computerScore + 1;
     refreshScore();
 }
 
 function winMessage(humanStr, computerStr) {
     console.log(`You Win! ${humanStr} beats ${computerStr}`);
+    rStat.textContent = `You Win! ${humanStr} beats ${computerStr}`
     humanScore = humanScore + 1;
     refreshScore();
 }
 
 function tieMessage(humanStr, computerStr) {
-    console.log(`You have tied! ${humanStr} vs ${computerStr}`)
+    console.log(`You have tied! ${humanStr} vs ${computerStr}`);
+    rStat.textContent = `You have tied! ${humanStr} vs ${computerStr}`;
     refreshScore();
 }
 
