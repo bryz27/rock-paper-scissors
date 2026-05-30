@@ -122,12 +122,15 @@ function finalResult() {
     if (humanScore > computerScore) {
         console.log(`You win the game! Your score: ${humanScore} Opponent score: ${computerScore}`);
         winMsg.textContent = `You win the game!`;
+        winMsg.style.color = 'green';
     } else if (computerScore > humanScore) {
         console.log(`You lose the game! Your score: ${humanScore} Opponent score: ${computerScore}`);
         winMsg.textContent = `You lose the game!`;
+        winMsg.style.color = 'red';
     } else if (humanScore == computerScore) {
         console.log(`You have tied the game! Your score: ${humanScore} Opponent score: ${computerScore}`)
         winMsg.textContent = `You have tied the game!`;
+        winMsg.style.color = 'black';
     }
     refreshScore();
 }

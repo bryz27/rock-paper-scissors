@@ -70,7 +70,11 @@ body {
     align-items: center;
 }
 
-#scorebox #winner p span{
+#scorebox #winner p span {
     font-size: 30px;
     font-weight: 500;
+}
+
+#scorebox #winner #win-msg {
+    font-size: 25px;
 }
